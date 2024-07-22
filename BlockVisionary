@@ -1,0 +1,19 @@
+# BlockVisionary.py
+
+class Block:
+    def __init__(self, block_number, transactions):
+        self.block_number = block_number
+        self.transactions = transactions
+    
+    def get_block_info(self):
+        print(f"Block Number: {self.block_number}")
+        print("Transactions:")
+        for index, tx in enumerate(self.transactions, start=1):
+            print(f"Transaction {index}: {tx}")
+
+# Example usage
+if __name__ == "__main__":
+    transactions = ["0x1234567890abcdef", "0xabcdef1234567890"]
+    block_number = 12345
+    block = Block(block_number, transactions)
+    block.get_block_info()
